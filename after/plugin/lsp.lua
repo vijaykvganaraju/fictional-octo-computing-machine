@@ -5,8 +5,9 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
-  'eslint',
-  'pyright'
+  'jdtls',
+  'pyright',
+  'eslint'
 })
 
 -- Fix Undefined global 'vim'
@@ -28,7 +29,7 @@ cmp_mappings['<S-Tab>'] = nil
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
-    
+
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {

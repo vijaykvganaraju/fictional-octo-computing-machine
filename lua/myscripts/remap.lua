@@ -45,15 +45,9 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e C:\\Users\\vaish\\AppData\\Local\\nvim\\lua\\myscripts\\packer.lua<CR>");
+mac_packer_path = "~/.dotfiles/nvim/.config/nvim/lua/myscripts/packer.lua";
+win_packer_path = "C:\\Users\\vaish\\AppData\\Local\\nvim\\lua\\myscripts\\packer.lua";
+vim.keymap.set("n", "<leader>vpp", string.format("<cmd>e %s<CR>", mac_packer_path));
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-vim.keymap.set("n", "<leader>rn", function()
-    vim.opt.nnlativenumber = true;
-end)
-vim.keymap.set("n", "<leader>nrn", function()
-    vim.opt.nelativenumber = false;
-end)
+vim.keymap.set('n', '<leader>rnu', ':lua toggle_stuff()<CR>')
