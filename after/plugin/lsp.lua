@@ -4,10 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
-  'rust_analyzer',
-  'jdtls',
-  'pyright',
-  'eslint'
+  'rust_analyzer'
 })
 
 -- Fix Undefined global 'vim'
